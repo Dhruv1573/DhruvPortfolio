@@ -1,9 +1,20 @@
-import React from "react";
+import React,{useRef,useEffect} from "react";
 import "./Contact.css";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import { contactInfo } from "../../portfolio";
+import lottie from "lottie-web";
 
 export default function Contact() {
+  const container=useRef(null);
+  useEffect(()=>{
+    lottie.loadAnimation({
+      container:container.current,
+      renderer:'svg',
+      loop:true,
+      autoplay:true,
+      animationData:require('../../assests/images/contact.json')
+    })
+  })
   return (
     <div className="main contact-margin-top" id="contact">
       <div className="contact-div-main">
@@ -28,11 +39,7 @@ export default function Contact() {
             <SocialMedia />
           </div>
         </div>
-        <div className="contact-image-div">
-          <img
-            alt="Dhruv Working"
-            src={require("../../assests/images/contactMail.png")}
-          ></img>
+        <div className="contact-image-div" ref= {container} >
         </div>
       </div>
     </div>

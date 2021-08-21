@@ -325,8 +325,8 @@ const contactPageData = {
     title: "Address",
     subtitle:
       "AT- Kela bigha, P.O+PS - Telhara, Dist - Nalanda, Bihar (801306)",
-    avatar_image_path: "address_image.svg",
-    location_map_link: "",
+    avatar_image_path: "contact.json",
+    location_map_link: "https://goo.gl/maps/6cwqTERpDjPPJ3cD7",
   },
   phoneSection: {
     title: "Phone Number",

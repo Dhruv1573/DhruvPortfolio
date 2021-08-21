@@ -19,7 +19,7 @@ export default function Greeting(props) {
       autoplay:true,
       animationData:require('../../assests/images/prouds.json')
     })
-  })
+  },[])
   return (
     <Fade bottom duration={2000} distance="40px">
       <div className="greet-main" id="greeting">
